@@ -1,0 +1,103 @@
+body, html
+{   background-size: cover;
+    background-image: url(beach.jpg)
+    
+}
+.chatWindow
+{   
+    
+    width: 500px;
+    height: 430px;
+    background-color: rgba(79, 215, 245, 0.299);
+}
+
+h1
+{   color: rgb(0, 0, 0);
+    background-color: rgba(245, 213, 110, 0.646);
+    text-align: center;
+}
+.totally
+{   
+    
+    background-color: gold;
+}
+td
+{   
+    
+    min-width: 75px;
+    color: rgb(7, 5, 5);
+    font-weight: bolder;
+    
+}
+
+.royal
+{
+    background-color: rgb(252, 255, 46);
+}
+
+td:nth-child(even)
+{
+background-color: rgb(238, 176, 121);
+}
+.spelare
+{
+    background-color: rgb(229, 255, 0) ;
+}
+td:nth-child(odd)
+
+{
+    background-color: rgb(255, 255, 102);
+}
+
+
+.chatHead
+{
+    background-color: rgb(128, 96, 255);
+    width: 500px;
+}
+
+
+.chatInput
+{
+    height: 40px;
+    background-color: lightseagreen;
+}
+
+a
+{   
+    position: relative;
+    top: 100%;
+    left: 10%;
+    right: 25%;
+    font-size: 25px;
+    background-color: cyan;
+    
+    
+}
+
+a:hover
+{
+    color: rgb(255, 140, 0);
+    background-color: darkmagenta;
+}
+ 
+
+
+.spelRam
+{
+    border-color: rgb(236, 255, 69);
+    background-color: seashell;
+}
+
+.chatRam
+{
+    border-color: rgb(69, 140, 255);
+    background-color: seashell;
+}
+.username
+{
+    background-color: rgb(111, 233, 111);
+}
+
+
+
