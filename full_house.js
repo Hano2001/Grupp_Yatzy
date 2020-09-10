@@ -1,7 +1,7 @@
 function countDice(dice) {
     let values = [];
 
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i <= countDice.length; i++) {
         values[i] = 0;
     }
 
@@ -16,4 +16,4 @@ function countDice(dice) {
     }    
 }
 
-countDice([3, 4, 5, 5, 6]);
+countDice[(Math.random(1, 6))];
