@@ -1,10 +1,10 @@
 function countDice(dice) {
     let values = [];
 
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i <= 5; i++) {
         values[i] = 0;
     }
-
+    
     for(let current_dice of dice) {
         values[current_dice]++;
     }
@@ -12,19 +12,16 @@ function countDice(dice) {
     console.log(values);
 
     let n = values.includes(3);
-    let a = values.includes(2)
+    let a = values.includes(2);
+    let kak = (n == true && a == true);
 
-    console.log(n)
-    console.log(a)
-
-    if (n == true && a == true) {
-        console.log("asdasd")
-    }
-
-
-    // if (values[1]===3); {
-    //     console.log(values);
-    // }    
+    console.log(kak);     
 }
 
-countDice([4, 4, 5, 5, 5]);
+countDice([Math.floor(Math.random() * 6), 
+    Math.floor(Math.random() * 6), 
+    Math.floor(Math.random() * 6),
+    Math.floor(Math.random() * 6),
+    Math.floor(Math.random() * 6),]);
+
+//countDice([1, 1, 5, 5, 5]);
