@@ -4,10 +4,10 @@ function countDice(dice) {
     let resultat = 0;
  
 
-    for (let i = 0; i <= 6; i++) {
+    //for (let i = 0; i <= 6; i++) {
         
-        values[i] = 0;
-    }
+        //values[i] = 0;
+    //}
     
     for(let current_dice of dice) {
         values[current_dice]++;
@@ -34,11 +34,13 @@ function countDice(dice) {
     console.log(amount);
     console.log(resultat);   
 }
-
-countDice([Math.floor(Math.random() * 6)+1, 
-    Math.floor(Math.random() * 6)+1, 
-    Math.floor(Math.random() * 6)+1,
-    Math.floor(Math.random() * 6)+1,
-    Math.floor(Math.random() * 6)+1,]);
-
+ 
+countDice()
+{
+    for (let i = 0; i <= 5; i ++);
+    {
+    dice[i] = [Math.floor(Math.random() * 6)+1]
+    }  
+    
+}  
 //countDice([1, 1, 5, 5, 5]);
