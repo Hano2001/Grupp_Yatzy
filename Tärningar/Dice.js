@@ -1,26 +1,16 @@
 document.addEventListener("DOMContentLoaded", function (event)
 {
-    event.preventDefault();
-    let t1 = document.getElementById("t1");
-    let t2 = document.getElementById("t2");
-    let t3 = document.getElementById("t3");
-    let t4 = document.getElementById("t4");
-    let t5 = document.getElementById("t5");
-    let kasta = document.getElementById("kasta");
-
-   
-
-    
-    
     function countDice() {
         let values = [];
-        let amount =[];
+        let amount = 0;
         //event.preventDefault()
         
     
-        for (let i = 0; i <= 5; i++) 
+        for (let i = 0; i <= 4; i++) 
         {   
             values[i] = (Math.floor)(Math.random() *6) +1;
+            amount += values[i]
+
 
             if (document.getElementById("c1").checked)
             {
@@ -30,13 +20,29 @@ document.addEventListener("DOMContentLoaded", function (event)
             
             //return values;
         }
+    event.preventDefault();
+    let t1 = document.getElementById("t1");
+    let t2 = document.getElementById("t2");
+    let t3 = document.getElementById("t3");
+    let t4 = document.getElementById("t4");
+    let t5 = document.getElementById("t5");
+    let kasta = document.getElementById("kasta");
+    let summa = document.getElementById("summa");
+
+   
+
+    
+    
+   
             
-           
+        
         t1.innerHTML = values[0];
         t2.innerHTML = values[1];
         t3.innerHTML = values[2];
         t4.innerHTML = values[3];
         t5.innerHTML = values[4];
+        summa.innerHTML = "Summa: " +amount;
+
 
             //return values; 
             console.log(values);
@@ -80,13 +86,15 @@ document.addEventListener("DOMContentLoaded", function (event)
 
         
            
-
-            
-        kasta.addEventListener("click", countDice(event))
-
-    {   event.preventDefault();
         
-    }
+            
+        kasta.addEventListener("click",function (event)
+        {
+            countDice();
+
+         event.preventDefault();
+        
+        })
 
        
 
