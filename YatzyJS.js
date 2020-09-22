@@ -183,6 +183,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //----------------------------------Tärningskastaren--------------------------------------
 
 let numberOfThrows = document.getElementById("throws_left");
+  let buttonAdd = document.getElementById("toScoreboard");
+  buttonAdd.disabled = true;
   let button = document.getElementById("throw"),
     count = 3;
 
@@ -250,7 +252,7 @@ let numberOfThrows = document.getElementById("throws_left");
   function addToSum(event) {
     let sum = [];
     let dices = document.getElementById("dices");
-    let dice = dices.getElementsByTagName("INPUT");
+    let dice = dices.getElementsByClassName("check");
 
     count -= 1;
     console.log("count = " + count);
@@ -271,6 +273,7 @@ let numberOfThrows = document.getElementById("throws_left");
       document.getElementById("dc5").checked = true;
 
       button.disabled = true; 
+      buttonAdd.disabled = false;      
     }
 
     for (let k = 0; k < dice.length; k++) {
@@ -279,10 +282,29 @@ let numberOfThrows = document.getElementById("throws_left");
       }
     }
     let total = sum.reduce((currentValue, previousValue) => currentValue + previousValue, 0);
-    console.log(sum);
-    console.log(total);
+    
+    console.log("sum = " + sum);
+    console.log("total = " + total);
     let counter = document.getElementById("total");
     counter.innerHTML = "Summa: " + total;
+  
+  // }
+  //----------------------in i formuläret-----------------//
+
+    let options = document.getElementById("scoreboardOptions");
+    //let dice_values = [];
+    let dice_values = [0, 0, 0, 0, 0, 0, 0];
+    if (sum[4] != undefined) {
+      dice_values = sum.map(currentValue => {dice_values[currentValue.value]++;})
+      console.log("dice_values = " + dice_values);
+    }
+    
   }
+  
+  // function calculateDiceValues() {
+  //   dice.map(currentValue => {
+  //       dice_values[currentValue.value]++;
+  //   })
+  // }
 
 });
