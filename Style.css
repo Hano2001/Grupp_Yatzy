@@ -101,8 +101,22 @@ a:hover
 
 input
 {
-    max-width: 1cm;
-    
+    max-width: 1cm;    
+}
+.dice{
+    float: left;
+    padding: 10px;
+}  
+.result{
+    float: left;
+    padding: 10px;
+} 
+img.dice_img{
+    width: 70px;
+    height: 70px;
+}
+input.check {
+    margin: auto;
 }
 
 
