@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     console.log(arr3);
 
-    let summ = arr3.reduce(function (acc, currValue) {
+    let summ = arr3.reduce( (acc, currValue) => {
       return acc + currValue;
     }, 0);
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     console.log(arr3);
 
-    let summ2 = arr3.reduce(function (acc, currValue) {
+    let summ2 = arr3.reduce( (acc, currValue) => {
       return acc + currValue;
     }, 0);
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     console.log(arr3);
 
-    let summ3 = arr3.reduce(function (acc, currValue) {
+    let summ3 = arr3.reduce( (acc, currValue) => {
       return acc + currValue;
     }, 0);
 
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     console.log(arr3);
 
-    let summ4 = arr3.reduce(function (acc, currValue) {
+    let summ4 = arr3.reduce((acc, currValue) =>{
       return acc + currValue;
     }, 0);
 
