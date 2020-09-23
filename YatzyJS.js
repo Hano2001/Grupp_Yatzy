@@ -292,19 +292,13 @@ let numberOfThrows = document.getElementById("throws_left");
   //----------------------in i formuläret-----------------//
 
     let options = document.getElementById("scoreboardOptions");
-    //let dice_values = [];
+   
     let dice_values = [0, 0, 0, 0, 0, 0, 0];
-    if (sum[4] != undefined) {
-      dice_values = sum.map(currentValue => {dice_values[currentValue.value]++;})
-      console.log("dice_values = " + dice_values);
+    if (sum[4] != undefined) {      
+      for(let current_dice of sum) {
+        dice_values[current_dice]++;
     }
-    
+      console.log("dice_values = " + dice_values);
+    }    
   }
-  
-  // function calculateDiceValues() {
-  //   dice.map(currentValue => {
-  //       dice_values[currentValue.value]++;
-  //   })
-  // }
-
 });
