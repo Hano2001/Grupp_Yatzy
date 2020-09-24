@@ -114,8 +114,10 @@ class Dice {
     let numberOfThrows = document.getElementById("throws_left");
     let diceImg = document.getElementsByClassName("dice_img");
     let button = document.getElementById("throw");
+    let counter = document.getElementById("total");
     numberOfThrows.innerHTML = "Antal kast kvar: 3";
     button.disabled = false;
+    counter.innerHTML = "Summa: 0";
 
     for (let i = 0; i < 5; i++) {
       diceImg[i].src = "images_dice/dice_nan.jpg";
