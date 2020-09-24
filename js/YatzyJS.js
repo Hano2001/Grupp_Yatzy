@@ -182,123 +182,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 //----------------------------------Tärningskastaren--------------------------------------
 
-let numberOfThrows = document.getElementById("throws_left");
-  let buttonAdd = document.getElementById("toScoreboard");
-  buttonAdd.disabled = true;
-  let button = document.getElementById("throw"),
-    count = 3;
+let dice = new Dice();
 
-  button.addEventListener("mousedown", addToSum);
-  button.addEventListener("mouseup", addNumber);
+let button = document.getElementById("throw");
 
-  function addNumber(event) {
-    event.preventDefault();
-    
+/*Collecting checked values on mousedown and generating 
+  new ones on mouseup*/
 
-    let random = [];
-    for (let i = 0; i <= 4; i++) {
-      random[i] = Math.floor(Math.random() * 6) + 1;
-    }
-    let diceImg = document.getElementsByClassName("dice_img");
-    let diceValue = [
-      { name: document.getElementById("d1"), iValue: random[0] },
-      { name: document.getElementById("d2"), iValue: random[1] },
-      { name: document.getElementById("d3"), iValue: random[2] },
-      { name: document.getElementById("d4"), iValue: random[3] },
-      { name: document.getElementById("d5"), iValue: random[4] },
-    ];
-
-    let checkbox = [
-      document.getElementById("dc1"),
-      document.getElementById("dc2"),
-      document.getElementById("dc3"),
-      document.getElementById("dc4"),
-      document.getElementById("dc5"),
-    ];
-    
-    for (let j = 0; j <= diceValue.length; j++) {
-      if (checkbox[j].checked == false) {
-        switch (diceValue[j].iValue) {
-          case 1:
-            diceImg[j].src = "images_dice/dice1.jpg";
-            checkbox[j].value = 1;
-            break;
-          case 2:
-            diceImg[j].src = "images_dice/dice2.jpg";
-            checkbox[j].value = 2;
-            break;
-          case 3:
-            diceImg[j].src = "images_dice/dice3.jpg";
-            checkbox[j].value = 3;
-            break;
-          case 4:
-            diceImg[j].src = "images_dice/dice4.jpg";
-            checkbox[j].value = 4;
-            break;
-          case 5:
-            diceImg[j].src = "images_dice/dice5.jpg";
-            checkbox[j].value = 5;
-            break;
-          case 6:
-            diceImg[j].src = "images_dice/dice6.jpg";
-            checkbox[j].value = 6;
-            break;
-          default:
-            diceImg[j].src = "images_dice/dice_nan.jpg";
-        }
-      }
-    }
-  }
-  function addToSum(event) {
-    let sum = [];
-    let dices = document.getElementById("dices");
-    let dice = dices.getElementsByClassName("check");
-
-    count -= 1;
-    console.log("count = " + count);
-
-    if (count >= 0) {
-      numberOfThrows.innerHTML = "Antal kast kvar: " + count;
-    } else if (count == -1) {      
-      document.getElementById("dc1").disabled = true;
-      document.getElementById("dc2").disabled = true;
-      document.getElementById("dc3").disabled = true;
-      document.getElementById("dc4").disabled = true;
-      document.getElementById("dc5").disabled = true;
-
-      document.getElementById("dc1").checked = true;
-      document.getElementById("dc2").checked = true;
-      document.getElementById("dc3").checked = true;
-      document.getElementById("dc4").checked = true;
-      document.getElementById("dc5").checked = true;
-
-      button.disabled = true; 
-      buttonAdd.disabled = false;      
-    }
-
-    for (let k = 0; k < dice.length; k++) {
-      if (dice[k].checked) {
-        sum.push(Number(dice[k].value));
-      }
-    }
-    let total = sum.reduce((currentValue, previousValue) => currentValue + previousValue, 0);
-    
-    console.log("sum = " + sum);
-    console.log("total = " + total);
-    let counter = document.getElementById("total");
-    counter.innerHTML = "Summa: " + total;
-  
-  // }
-  //----------------------in i formuläret-----------------//
-
-    let options = document.getElementById("scoreboardOptions");
-   
-    let dice_values = [0, 0, 0, 0, 0, 0, 0];
-    if (sum[4] != undefined) {      
-      for(let current_dice of sum) {
-        dice_values[current_dice]++;
-    }
-      console.log("dice_values = " + dice_values);
-    }    
-  }
+button.addEventListener("mousedown", function (e) {
+  dice.addSaved();
+});
+button.addEventListener("mouseup", function (e) {
+  dice.addImage();
+});
 });
