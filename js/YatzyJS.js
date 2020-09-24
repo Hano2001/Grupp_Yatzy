@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     dice.addImage();
   });
   let btnSubmit = document.getElementById("toScoreboard");
-  btnSubmit.addEventListener("click", function (e) {
-    dice = new Dice();
+  btnSubmit.addEventListener("click", function (e) {    
     dice.reset();
+    dice = new Dice();
   });
 });
