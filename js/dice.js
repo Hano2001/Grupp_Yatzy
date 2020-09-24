@@ -72,8 +72,7 @@ class Dice {
       }
     }
     let total = saved.reduce(
-      (curretValue, previousValue) => curretValue + previousValue,
-      0
+      (curretValue, previousValue) => curretValue + previousValue,0
     );
     //diceValues only triggers if all 5 boxes are checked
     if (saved[4] != undefined) {
@@ -107,5 +106,21 @@ class Dice {
       }
       button.disabled = true;
     }
+  }
+  reset() {
+    console.log("reset");
+
+    let numberOfThrows = document.getElementById("throws_left");
+    let diceImg = document.getElementsByClassName("dice_img");
+    let button = document.getElementById("throw");
+    numberOfThrows.innerHTML = "Antal kast kvar: 3";
+    button.disabled = false;
+
+    for (let i = 0; i < 5; i++) {
+      diceImg[i].src = "images_dice/dice_nan.jpg";      
+      this.checkbox[i].checked = false;
+      this.checkbox[i].disabled = false;
+    }
+    
   }
 }

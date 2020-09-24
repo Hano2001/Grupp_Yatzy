@@ -182,6 +182,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 //----------------------------------Tärningskastaren--------------------------------------
 
+
+
+
+
 let dice = new Dice();
 
 let button = document.getElementById("throw");
@@ -194,5 +198,10 @@ button.addEventListener("mousedown", function (e) {
 });
 button.addEventListener("mouseup", function (e) {
   dice.addImage();
+});
+let btnSubmit = document.getElementById("toScoreboard");
+btnSubmit.addEventListener("click", function(e) {  
+  dice = new Dice();
+  dice.reset();
 });
 });
