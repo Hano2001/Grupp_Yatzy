@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dice{
+            float: left;
+            padding: 10px;
+        }  
+        .result{
+            float: left;
+            padding: 10px;
+        } 
+        img.dice_img{
+            width: 70px;
+            height: 70px;
+        }
+        input.check {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="allDice">
+        <div class="dice">
+            <img class ="dice_img" id="d1" src="images_dice/dice_nan.jpg">               
+            <br>
+            <input type="checkbox" id="dc1" class="check" value="0">
+        </div>   
+        <div class="dice">
+            <img class ="dice_img" id="d2" src="images_dice/dice_nan.jpg"> 
+            <br>
+            <input type="checkbox" id="dc2" class="check" value="0">
+        </div> 
+        <div class="dice">
+            <img class ="dice_img" id="d3" src="images_dice/dice_nan.jpg"> 
+            <br>
+            <input type="checkbox" id="dc3" class="check" value="0">
+        </div> 
+        <div class="dice">
+            <img class ="dice_img" id="d4" src="images_dice/dice_nan.jpg"> 
+            <br>
+            <input type="checkbox" id="dc4" class="check" value="0">
+        </div> 
+        <div class="dice">
+            <img class ="dice_img" id="d5" src="images_dice/dice_nan.jpg"> 
+            <br>
+            <input type="checkbox" id="dc5" class="check" value="0">
+        </div> 
+    </div>
+    <div class="result">
+        <button id="throw">Kasta</button>
+        <br>
+        <p id="throws_left">Antal kast kvar: 3</p><br>
+        <p id="total">Summa:</p>
+    </div>
+    <script src="js/dice.js"></script>
+    <script src="js/die.js"></script>
+    <script src="js/throw_script.js"></script>
+</body>
+</html>
