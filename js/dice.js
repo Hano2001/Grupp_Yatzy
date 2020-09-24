@@ -75,8 +75,8 @@ class Dice {
       (curretValue, previousValue) => curretValue + previousValue,
       0
     );
-    //diceValues only triggers if all 5 boxes are checked
-    if (saved[4] != undefined) {
+    //diceValues only triggers if all 5 boxes are checked and count is 0
+    if (saved[4] != undefined && this.count < 0) {
       for (let current_dice of saved) {
         this.diceValues[current_dice]++;
       }
@@ -106,6 +106,23 @@ class Dice {
         this.checkbox[i].checked = true;
       }
       button.disabled = true;
+    }
+  }
+  reset() {
+    console.log("reset");
+
+    let numberOfThrows = document.getElementById("throws_left");
+    let diceImg = document.getElementsByClassName("dice_img");
+    let button = document.getElementById("throw");
+    let counter = document.getElementById("total");
+    numberOfThrows.innerHTML = "Antal kast kvar: 3";
+    button.disabled = false;
+    counter.innerHTML = "Summa: 0";
+
+    for (let i = 0; i < 5; i++) {
+      diceImg[i].src = "images_dice/dice_nan.jpg";
+      this.checkbox[i].checked = false;
+      this.checkbox[i].disabled = false;
     }
   }
 }
