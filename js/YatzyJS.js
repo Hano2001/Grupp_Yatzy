@@ -129,14 +129,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let spel1_4 = document.getElementById("Fyror_1");
   let spel1_5 = document.getElementById("Femmor_1");
   let spel1_6 = document.getElementById("Sexor_1");
- 
+
   spel1_1.addEventListener("change", summa1);
   spel1_2.addEventListener("change", summa1);
   spel1_3.addEventListener("change", summa1);
   spel1_4.addEventListener("change", summa1);
   spel1_5.addEventListener("change", summa1);
   spel1_6.addEventListener("change", summa1);
-
 
   let spel2_1 = document.getElementById("Ettor_2");
   let spel2_2 = document.getElementById("Tvåor_2");
@@ -180,28 +179,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
   spel4_5.addEventListener("change", summa4);
   spel4_6.addEventListener("change", summa4);
 
-//----------------------------------Tärningskastaren--------------------------------------
+  //----------------------------------Tärningskastaren--------------------------------------
 
+  let dice = new Dice();
 
+  let button = document.getElementById("throw");
 
-
-
-let dice = new Dice();
-
-let button = document.getElementById("throw");
-
-/*Collecting checked values on mousedown and generating 
+  /*Collecting checked values on mousedown and generating 
   new ones on mouseup*/
 
-button.addEventListener("mousedown", function (e) {
-  dice.addSaved();
-});
-button.addEventListener("mouseup", function (e) {
-  dice.addImage();
-});
-let btnSubmit = document.getElementById("toScoreboard");
-btnSubmit.addEventListener("click", function(e) {  
-  dice = new Dice();
-  dice.reset();
-});
+  button.addEventListener("mousedown", function (e) {
+    dice.addSaved();
+  });
+  button.addEventListener("mouseup", function (e) {
+    dice.addImage();
+  });
+  let btnSubmit = document.getElementById("toScoreboard");
+  btnSubmit.addEventListener("click", function (e) {
+    dice = new Dice();
+    dice.reset();
+  });
 });
