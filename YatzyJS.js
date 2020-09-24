@@ -216,7 +216,7 @@ let numberOfThrows = document.getElementById("throws_left");
       document.getElementById("dc5"),
     ];
     
-    for (let j = 0; j <= diceValue.length; j++) {
+    for (let j = 0; j < diceValue.length; j++) {
       if (checkbox[j].checked == false) {
         switch (diceValue[j].iValue) {
           case 1:
