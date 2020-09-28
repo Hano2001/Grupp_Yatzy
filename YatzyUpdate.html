@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="Style.css">
     <meta charset="UTF-8">
@@ -7,189 +8,244 @@
     <title>BEACH YATZY</title>
 </head>
 <body>
-<h1>MOTHERFUCKING BEACH YATZY</h1>
+    <h1>MOTHERFUCKING BEACH YATZY</h1>
 
-<div class="chat">
-    <table class="chatRam" style="float: right;" border="10">
-    <tr>
-    <th class="chatHead">Chat room</th> 
+    <div style="float: right;" class="chatWrap">
+        <table class="chatRam" border="10">
+            
+            
+            <th class="chatHead">Chat room</th>
+            
+            <tr>
+                <th class="chatWindow" id="chatRuta"></th>
+            </tr>
+            
+                <th class="chatInput">
+                <input class="chatText" id="chatInput" type="text">
+                
+                    <button id="chatBtn">Send</button>
+                </th>
+
+            </tr>
+            <tr>
+                <Th class="username">USERNAME</Th>
+            
+            </tr>
+            
+        </table>
+    </div>
+    
     
 
-    <tr>
-        <th class="chatWindow"> </th>
-            
-    </tr>
-    <tr>
-        
-        <th class="chatInput"> <input type="text" size="65"></th>
-    </tr>
-    <tr>
-        <Th class="username">USERNAME</Th>
-    </tr>
-</table>
+    
 
-</div>
+    <div style="float: left;" class="gameWrap">
 
-<div class="gameBoard">
+        <table class="spelRam"border="10">
+            <thead>
+                <tr>
+                    <th class="spelare">Spelare/Player</th>
+                    <th class="spelare"><input id="spelare1" type="text" maxlength="2" size="3"></th>
+                    <th class="spelare"><input id="spelare2" type="text" maxlength="2" size="3"></th>
+                    <th class="spelare"><input type="text" maxlength="2" size="3"></th>
+                    <th class="spelare"><input type="text" maxlength="2" size="3"></th>
+            </thead>
+            <tbody>
+                <form>
 
-    <table class="spelRam" style="float: left;" border="10">
-        <thead>
-            <tr>
-            <th class="spelare">Spelare/Player</th>
-            <th class="spelare"><input type="text" maxlength="2" size = "3"></th>
-            <th class="spelare"><input type="text" maxlength="2" size = "3"></th>
-            <th class="spelare"><input type="text" maxlength="2" size = "3"></th>
-            <th class="spelare"><input type="text" maxlength="2" size = "3"></th>
-        </thead>
-        <tbody>
-        <form>
-        
-        <tr>
-            <td>Ettor/Ones</td>
-            <td><input class="siffror1" type="number" id="Ettor_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Ettor_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Ettor_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Ettor_4" maxlength="2" size="3"></td>     
-        </tr>
-        <tr>
-            <td>Tvåor/Two's</td>
-            <td><input class="siffror1" type="number" id="Tvåor_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Tvåor_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Tvåor_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Tvåor_4" maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Treor/Three's</td>
-            <td><input class="siffror1" type="number" id="Treor_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Treor_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Treor_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Treor_4"maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Fyror/Four's</td>
-            <td><input class="siffror1" type="number" id="Fyror_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Fyror_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Fyror_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Fyror_4" maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Femmor/Fives</td>
-            <td><input class="siffror1" type="number" id="Femmor_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Femmor_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Femmor_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Femmor_4" maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Sexor/Sixes</td>
-            <td><input class="siffror1" type="number" id="Sexor_1" maxlength="2" size="3"></td>
-            <td><input class="siffror2" type="number" id="Sexor_2" maxlength="2" size="3"></td>
-            <td><input class="siffror3" type="number" id="Sexor_3" maxlength="2" size="3"></td>
-            <td><input class="siffror4" type="number" id="Sexor_4" maxlength="2" size="3"></td>
-            <tr>
-                
-            </tr>
-        </tr>
+                    <tr>
+                        <td>Ettor/Ones</td>
+                        <td><input class="siffror1" type="number" id="Ettor_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Ettor_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Ettor_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Ettor_4" maxlength="2" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Tvåor/Two's</td>
+                        <td><input class="siffror1" type="number" id="Tvåor_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Tvåor_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Tvåor_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Tvåor_4" maxlength="2" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Treor/Three's</td>
+                        <td><input class="siffror1" type="number" id="Treor_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Treor_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Treor_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Treor_4" maxlength="2" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Fyror/Four's</td>
+                        <td><input class="siffror1" type="number" id="Fyror_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Fyror_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Fyror_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Fyror_4" maxlength="2" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Femmor/Fives</td>
+                        <td><input class="siffror1" type="number" id="Femmor_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Femmor_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Femmor_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Femmor_4" maxlength="2" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Sexor/Sixes</td>
+                        <td><input class="siffror1" type="number" id="Sexor_1" maxlength="2" size="3"></td>
+                        <td><input class="siffror2" type="number" id="Sexor_2" maxlength="2" size="3"></td>
+                        <td><input class="siffror3" type="number" id="Sexor_3" maxlength="2" size="3"></td>
+                        <td><input class="siffror4" type="number" id="Sexor_4" maxlength="2" size="3"></td>
+                    <tr>
+
+                    </tr>
+                    </tr>
+                    
+
+                </form>
+
+
+                <tr>
+                    <th class="royal">Summa/Sum</th>
+                    <th id="Summa1" class="totally"></th>
+                    <th id="Summa2" class="totally"></th>
+                    <th id="Summa3" class="totally"></th>
+                    <th id="Summa4" class="totally"></th>
+                </tr>
+                <tr>
+                    <th class="royal">Bonus</th>
+                    <th id="Bonus1" class="totally"></th>
+                    <th id="Bonus2" class="totally"></th>
+                    <th id="Bonus3" class="totally"></th>
+                    <th id="Bonus4" class="totally"></th>
+                </tr>
+                <tr>
+                    <td>Par/Pair</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Två Par/Two Pair</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Triss/Three of a kind</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Fyrtal</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Lite stege/Small straight</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <td>Stor stege/Big straight </td>
+                <td><input maxlength="2" size="3"></td>
+                <td><input maxlength="2" size="3"></td>
+                <td><input maxlength="2" size="3"></td>
+                <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Kåk/Full house</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Chans/Chance</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+                <tr>
+                    <td>Yatzy</td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                    <td><input maxlength="2" size="3"></td>
+                </tr>
+            <tfoot>
+                <tr>
+                    <th class="royal">Totalt/Total</th>
+                    <th class="totally"> <input maxlength="3" size="3"></th>
+                    <th class="totally"> <input maxlength="3" size="3"></th>
+                    <th class="totally"> <input maxlength="3" size="3"></th>
+                    <th class="totally"> <input maxlength="3" size="3"></th>
+                </tr>
+                <tr>
+                    <!-- <button id="submit" type="button">Beräkna</button> -->
+                </tr>
+            </tfoot>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!---<a href="players.html">FIND PLAYERS</a>-->
+
+    <!---Tärningar-->
+
+    <div style= "float: right;" id="allDice">
+        <div class="dice">
+            <img class="dice_img" id="d1" src="images_dice/dice_nan.jpg">
+            <br>
+            <input type="checkbox" id="dc1" class="check" value="0">
+        </div>
+        <div class="dice">
+            <img class="dice_img" id="d2" src="images_dice/dice_nan.jpg">
+            <br>
+            <input type="checkbox" id="dc2" class="check" value="0">
+        </div>
+        <div class="dice">
+            <img class="dice_img" id="d3" src="images_dice/dice_nan.jpg">
+            <br>
+            <input type="checkbox" id="dc3" class="check" value="0">
+        </div>
+        <div class="dice">
+            <img class="dice_img" id="d4" src="images_dice/dice_nan.jpg">
+            <br>
+            <input type="checkbox" id="dc4" class="check" value="0">
+        </div>
+        <div class="dice">
+            <img class="dice_img" id="d5" src="images_dice/dice_nan.jpg">
+            <br>
+            <input type="checkbox" id="dc5" class="check" value="0">
+        </div>
+    </div>
+    <div class="result">
+        <button id="throw">Kasta/addera</button>
         <br>
-        
-         </form>
-        
-        
-        <tr>
-            <th class="royal">Summa/Sum</th>
-            <th id="Summa1" class="totally"></th>
-            <th id="Summa2" class="totally"></th>
-            <th id="Summa3" class="totally"></th>
-            <th id="Summa4" class="totally"></th>
-        </tr>
-        <tr>
-            <th class="royal">Bonus</th>
-            <th id="Bonus1" class="totally"></th>
-            <th id="Bonus2" class="totally"></th>
-            <th id="Bonus3" class="totally"></th>
-            <th id="Bonus4" class="totally"></th>
-        </tr>
-        <tr>
-            <td>Par/Pair</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Två Par/Two Pair</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Triss/Three of a kind</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Fyrtal</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Lite stege/Small straight</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-            <td>Stor stege/Big straight </td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Kåk/Full house</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Chans/Chance</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tr>
-            <td>Yatzy</td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-            <td><input maxlength="2" size="3"></td>
-        </tr>
-        <tfoot>
-        <tr>
-            <th class="royal">Totalt/Total</th>
-            <th class="totally"> <input maxlength="3" size="3"></th>
-            <th class="totally"> <input maxlength="3" size="3"></th>
-            <th class="totally"> <input maxlength="3" size="3"></th>
-            <th class="totally"> <input maxlength="3" size="3"></th>
-        </tr> 
-         <tr> 
-            <!-- <button id="submit" type="button">Beräkna</button> -->
-        </tr>
-        </tfoot>
-        </tbody>
-        
-    </table>
-</div>
-
-
-<a href="players.html">FIND PLAYERS</a>
-
- <script src="YatzyJS.js"> </script>   
+        <p id="throws_left">Antal kast kvar: 3</p><br>
+        <p id="total">Summa:</p>
+    </div>
+    <div class="result">
+        <select id="scoreboardOptions">
+            <option value="-">-</option>
+        </select>
+        <button type="button" id="toScoreboard">Starta/Lägg till</button>
+    </div>
+    <script src="Game.js"></script>
+    <script src="Players.js"></script>
+    <script src="js/die.js"> </script>
+    <script src="js/dice.js"> </script>
+    <script src="js/YatzyJS.js"> </script>
+    <script src="js/chat.js"></script>
 </body>
+
 </html>

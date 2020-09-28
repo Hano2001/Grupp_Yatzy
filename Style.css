@@ -1,15 +1,34 @@
 body, html
 {   background-size: cover;
-    background-image: url(beach2.jpg)
+    background-image: url(beach.jpg)
 
 }
-.chatWindow
-{   
-    
-    width: 500px;
-    height: 430px;
-    background-color: rgba(79, 215, 245, 0.299);
+
+.chatWrap
+{
+    height:490px;
+    width: 450px;
 }
+
+.gameWrap
+{
+    height: 500px;
+    width: 450px;
+}
+
+.chatWindow
+{   width: 500px;
+    height: 400px;
+    overflow: auto;
+    overflow-y: scroll;
+    
+    
+    background-image: linear-gradient(to right, lightblue, rgb(230, 136, 233));
+    /* background-color: rgba(79, 215, 245, 0.299); */
+}
+
+
+
 
 h1
 {   color: rgb(0, 0, 0);
@@ -49,18 +68,25 @@ td:nth-child(odd)
     background-color: rgb(255, 255, 102);
 }
 
-
 .chatHead
 {
     background-color: rgb(128, 96, 255);
-    width: 500px;
+    /*width: 500px;*/
 }
 
 
 .chatInput
 {
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    max-height: 50px;
     background-color: lightseagreen;
+}
+
+.chatText
+{
+    width:350px;
+    height: 30px;
 }
 
 a
@@ -84,13 +110,14 @@ a:hover
 
 
 .spelRam
-{
+{   /*height: 500px;
+    width: 500px;*/
     border-color: rgb(236, 255, 69);
     background-color: seashell;
 }
 
 .chatRam
-{
+{   
     border-color: rgb(69, 140, 255);
     background-color: seashell;
 }
@@ -99,10 +126,56 @@ a:hover
     background-color: rgb(111, 233, 111);
 }
 
-input
+.siffror1
 {
-    max-width: 1cm;
-    
+    max-width: 45px;    
+}
+.siffror2
+{
+    max-width: 45px;    
+}
+.siffror3
+{
+    max-width: 45px;    
+}
+.siffror4
+{
+    max-width: 45px;    
+}
+.allDice
+{
+    margin: auto;
+    text-align: center;
+}
+.dice{
+    float: left;
+    align-content: center;
+    padding: 10px;
+}  
+.result{
+    float: left;
+    padding: 10px;
+} 
+img.dice_img{
+    width: 70px;
+    height: 70px;
+}
+input.check {
+    margin: auto;
+}
+
+.msg
+{   
+    float: right;
+    background-color: rgb(79, 142, 231);
+    text-align: center;
+    margin: 10px;
+    width: 50%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid darkblue;
+    border-radius: 25px;
+    /*vertical-align: text-bottom;*/
 }
 
 
