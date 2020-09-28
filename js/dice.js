@@ -72,10 +72,11 @@ class Dice {
       }
     }
     let total = saved.reduce(
-      (curretValue, previousValue) => curretValue + previousValue,0
+      (curretValue, previousValue) => curretValue + previousValue,
+      0
     );
-    //diceValues only triggers if all 5 boxes are checked
-    if (saved[4] != undefined) {
+    //diceValues only triggers if all 5 boxes are checked and count is 0
+    if (saved[4] != undefined && this.count < 0) {
       for (let current_dice of saved) {
         this.diceValues[current_dice]++;
       }
@@ -117,10 +118,9 @@ class Dice {
     button.disabled = false;
 
     for (let i = 0; i < 5; i++) {
-      diceImg[i].src = "images_dice/dice_nan.jpg";      
+      diceImg[i].src = "images_dice/dice_nan.jpg";
       this.checkbox[i].checked = false;
       this.checkbox[i].disabled = false;
     }
-    
   }
 }
