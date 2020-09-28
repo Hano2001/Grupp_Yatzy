@@ -5,9 +5,7 @@ class Game {
       
     }
 
-    summa() {
-    player.name = document.getElementById("spelare1").value;
-     
+    summa() {     
       let numberArray = document.getElementsByClassName("siffror1");
       let arr2 = Array.from(numberArray);
       let arr3 = arr2.map((element) => {

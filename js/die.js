@@ -7,8 +7,6 @@ class Die {
     this.value = this.newRandom();
   }
   newRandom() {
-    for (let i = 0; i <= 6; i++) {
       return Math.floor(Math.random() * 6) + 1;
-    }
   }
 }
